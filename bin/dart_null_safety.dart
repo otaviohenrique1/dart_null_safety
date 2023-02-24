@@ -1,5 +1,16 @@
-import 'package:dart_null_safety/dart_null_safety.dart' as dart_null_safety;
-
 void main(List<String> arguments) {
-  print('Hello world: ${dart_null_safety.calculate()}!');
+  // String? nome = null;
+  String? nome;
+  print(nome.runtimeType);
+
+  String sobrenome = "Lima";
+  print(sobrenome.runtimeType);
+
+  // ignore: unnecessary_null_comparison
+  if (nome != null) {
+    String nomeCompleto = nome + sobrenome;
+    print(nomeCompleto.runtimeType);
+  } else {
+    print("O nome é nulo");
+  }
 }
